@@ -1,0 +1,5 @@
+function chkPasswords(){
+    var init =
+
+
+}

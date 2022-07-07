@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/styles.css"/>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="./js/home.js"></script>
 </head>
-<body>
+<body onload="registerHandlers();">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -34,8 +35,6 @@
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-
-
     <!-- Hall of Infamy Section -->
     <div class="w3-container w3-padding-32" id="infamy">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Hall of Infamy</h3>
@@ -45,7 +44,6 @@
             Tall tales and legends surrounded the most famous buccaneers, so we will start by learning more about them in the Hall of Infamy.
         </p>
     </div>
-
     <div class="w3-row-padding">
         <div class="w3-col l3 m6 w3-margin-bottom">
             <img src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/f/fa/Blackbeard_Based_On.png/revision/latest?cb=20150823040241" alt="BlackBeard" style="width:100%" >
@@ -77,19 +75,21 @@
         </div>
     </div>
 
+
+
     <!-- Register Section -->
     <div class="w3-container w3-padding-32" id="register">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Register</h3>
         <p>Sign up for ARRRG!!! hourly reminders to visit our website.</p>
-        <form action="/action_page.php" target="_blank">
-            <input class="w3-input w3-border" type="text" placeholder="User Name" required name="User Name">
-            <input class="w3-input w3-section w3-border" type="password" placeholder="Password" required name="Password">
-            <input class="w3-input w3-section w3-border" type="password" placeholder="Repeat Password" required name="Repeat Password">
-            <input class="w3-input w3-section w3-border" type="text" placeholder="First Name" required name="First Name">
-            <input class="w3-input w3-section w3-border" type="text" placeholder="Last Name" required name="Last Name">
-            <input class="w3-input w3-section w3-border" type="text" placeholder="Address Line 1" required name="Address Line 1">
-            <input class="w3-input w3-section w3-border" type="text" placeholder="Address Line 2" required name="Address Line 2">
-            <input class="w3-input w3-section w3-border" type="text" placeholder="City" required name="City">
+        <form id="myForm">
+            <input id="username" class="w3-input w3-border" type="text" placeholder="User Name" required name="User Name">
+            <input id="password" class="w3-input w3-section w3-border" type="password" placeholder="Password" required name="Password">
+            <input id="repeatPassword" class="w3-input w3-section w3-border" type="password" placeholder="Repeat Password" required name="Repeat Password">
+            <input id="firstName" class="w3-input w3-section w3-border" type="text" placeholder="First Name" required name="First Name">
+            <input id="lastName" class="w3-input w3-section w3-border" type="text" placeholder="Last Name" required name="Last Name">
+            <input id="address1" class="w3-input w3-section w3-border" type="text" placeholder="Address Line 1" required name="Address Line 1">
+            <input id="address2" class="w3-input w3-section w3-border" type="text" placeholder="Address Line 2" required name="Address Line 2">
+            <input id="city" class="w3-input w3-section w3-border" type="text" placeholder="City" required name="City">
             <!--- US States - reference: https://www.html-code-generator.com/html/drop-down/state-name-->
             <select id="country-state" name="country-state">
                 <option value="-Select-">State</option>
@@ -145,9 +145,9 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
             </select>
-            <input class="w3-input w3-section w3-border" type="text" placeholder="Zip Code" required name="Zip Code">
-            <input class="w3-input w3-section w3-border" type="text" placeholder="Phone Number" required name="Phone Number">
-            <input class="w3-input w3-section w3-border" type="email" placeholder="Email" required name="Email">
+            <input id="zip" class="w3-input w3-section w3-border" type="text" placeholder="Zip Code" required name="Zip Code">
+            <input id="phone" class="w3-input w3-section w3-border" type="text" placeholder="Phone Number" required name="Phone Number">
+            <input id="email" class="w3-input w3-section w3-border" type="email" placeholder="Email" required name="Email">
             <b>Gender</b></br>
             <input type="radio"
                    name="gender" id="maleGender"
@@ -176,10 +176,11 @@
                 <i class="fa fa-paper-plane"></i> WALK THE PLANK </button>
             <button class="w3-button w3-black w3-section" type="reset">
                 <i class="fa fa-paper-plane"></i> RESET </button>
-
         </form>
     </div>
 
+
+    <!-- CSS Wave Elements -->
     <div class="ocean">
         <div class="wave"></div>
         <div class="wave"></div>
@@ -187,9 +188,6 @@
 
     <!-- End page content -->
 </div>
-
-
-
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
